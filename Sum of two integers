@@ -1,0 +1,11 @@
+class Solution {
+    public int getSum(int a, int b) {
+         while(b != 0){ // here b acts as the value which contains the carry ..
+            int temp = (a & b) << 1; //and we have to do AND operator which requires the original a value ,
+                                    // if we dont take temp then the updated xor a value will be taken for the AND operator which is wrong .
+            a = a ^ b ;
+            b = temp; 
+    }
+    return a;
+}
+}
